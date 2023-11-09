@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>AstroImageJ</string>
         <key>SEARCH_URL</key>
-        <string>https://www.astro.louisville.edu/software/astroimagej/installation_packages</string>
+        <string>http://www.astro.louisville.edu/software/astroimagej/updates/updatesjava17/</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
@@ -23,9 +23,8 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%SEARCH_URL%</string>
+                <string>%SEARCH_URL%/version.txt</string>
                 <key>re_pattern</key>
-                <!-- AstroImageJ_v5.1.0.00_mac_intel_java18.dmg -->
                 <string><![CDATA[<a href="(?P<dmg>AstroImageJ_v(?P<version>[0-9.]+.[0-9]+)_.*\.dmg)">]]></string>
             </dict>
         </dict>
@@ -35,7 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%SEARCH_URL%/%dmg%</string>
+                <string>%SEARCH_URL%/ij%version%.jar</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
